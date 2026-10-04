@@ -1,68 +1,52 @@
-class FirstThread extends Thread {
-
-    public FirstThread(String name) {
-        super(name);
-    }
-
-    @Override
-    public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(getName() + " - " + i);
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println(getName() + " interrupted.");
-            }
-        }
-    }
-}
-
-class SecondThread extends Thread {
-
-    public SecondThread(String name) {
-        super(name);
-    }
-
-    @Override
-    public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(getName() + " - " + i);
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println(getName() + " interrupted.");
-            }
-        }
-    }
-}
-
-public class ThreadM {
-
+public class ThreadMain {
     public static void main(String[] args) {
 
-        System.out.println("----- Using start() -----");
+        CookingTask task1 = new CookingTask("Cooking");
+        CookingTask task2 = new CookingTask("Washing");
+        CookingTask task3 = new CookingTask("Cleaning");
 
-        FirstThread t1 = new FirstThread("Thread 1");
-        SecondThread t2 = new SecondThread("Thread 2");
+        task1.start();
+        task2.start();
+        task3.start();
 
-        t1.start();
-        t2.start();
+        System.out.println("All tasks started...");
+    }
+}
 
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            System.out.println("Main thread interrupted.");
+class CookingTask extends Thread {
+
+    private String taskName;
+
+    public CookingTask(String taskName) {
+        this.taskName = taskName;
+    }
+
+    @Override
+    public void run() {
+
+        long startTime = System.currentTimeMillis();
+
+        while (true) {
+
+            System.out.println(
+                    Thread.currentThread().getName()
+                    + " - Running: " + taskName
+            );
+
+            // Wait 1 second before next iteration
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println(taskName + " interrupted.");
+                break;
+            }
+
+            // Stop after 10 seconds
+            if (System.currentTimeMillis() - startTime >= 10_000) {
+                break;
+            }
         }
 
-        System.out.println("\n----- Using run() -----");
-
-        FirstThread t3 = new FirstThread("Thread 3");
-        SecondThread t4 = new SecondThread("Thread 4");
-
-        t3.run();
-        t4.run();
+        System.out.println(taskName + " finished.");
     }
 }
