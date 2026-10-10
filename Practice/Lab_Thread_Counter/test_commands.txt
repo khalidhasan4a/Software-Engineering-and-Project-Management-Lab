@@ -1,0 +1,31 @@
+
+javac Khalid_Thread.java
+
+TC1 — 1 Thread, 1000 Increments
+java Khalid_Thread 1 1000 true
+java Khalid_Thread 1 1000 false
+
+TC2 — 2 Threads, 10000 Increments
+java Khalid_Thread 2 10000 true
+java Khalid_Thread 2 10000 false
+
+TC3 — 5 Threads, 10000 Increments
+java Khalid_Thread 5 10000 true
+java Khalid_Thread 5 10000 false
+
+TC4 — 10 Threads, 50000 Increments
+java Khalid_Thread 10 50000 true
+java Khalid_Thread 10 50000 false
+
+TC5 — 20 Threads, 50000 Increments
+java Khalid_Thread 20 50000 true
+java Khalid_Thread 20 50000 false
+
+TC6 — 50 Threads, 50000 Increments
+java Khalid_Thread 50 50000 true
+java Khalid_Thread 50 50000 false
+
+TC7 — 100 Threads, 50000 Increments
+java Khalid_Thread 100 50000 true
+java Khalid_Thread 100 50000 false
+
