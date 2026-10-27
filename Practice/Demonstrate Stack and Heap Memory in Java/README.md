@@ -248,3 +248,16 @@ Run each program separately. Both classes use console input.
 
 **Submitted by:** Md. Khalid Hasan  
 **Student ID:** IT24013
+
+
+---
+
+## Output Screenshots
+
+### 1. Student Program Output
+
+![Student Program Output](Output/Output%20Student.png)
+
+### 2. Employee Program Output
+
+![Employee Program Output](Output/Output%20Employee.png)
