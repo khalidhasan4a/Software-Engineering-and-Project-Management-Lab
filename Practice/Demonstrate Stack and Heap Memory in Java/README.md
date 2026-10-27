@@ -81,7 +81,7 @@ Local Variable (marks): 85
 
 ### IntelliJ IDEA output screenshot
 
-![Student program output](screenshots/student-output.png)
+![Student Program Output](Output/Output%20Student.png)
 
 ---
 
@@ -190,7 +190,7 @@ show() -> Executes in its own method frame
 
 ### IntelliJ IDEA output screenshot
 
-![Employee program output](screenshots/employee-output.png)
+![Employee Program Output](Output/Output%20Employee.png)
 
 ---
 
@@ -250,14 +250,3 @@ Run each program separately. Both classes use console input.
 **Student ID:** IT24013
 
 
----
-
-## Output Screenshots
-
-### 1. Student Program Output
-
-![Student Program Output](Output/Output%20Student.png)
-
-### 2. Employee Program Output
-
-![Employee Program Output](Output/Output%20Employee.png)
