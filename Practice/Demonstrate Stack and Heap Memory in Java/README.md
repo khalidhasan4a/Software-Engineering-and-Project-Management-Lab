@@ -228,23 +228,6 @@ java -cp src Employee
 
 Run each program separately. Both classes use console input.
 
----
-
-## Mark Distribution
-
-### Problem 1 — Student (1 Point in the title; 3-point rubric supplied)
-
-- Correctly define the `Student` class and instance variable.
-- Declare and display the local variable inside `display()`.
-- Create the object and display its identity hash code.
-
-### Problem 2 — Employee (3 Points)
-
-- Correctly implement the `Employee` class, instance variable, and `display()` method.
-- Implement the local `Report` class and its `show()` method.
-- Display identity hash codes and identify the instance field, local variable, and method execution frame.
-
----
 
 **Submitted by:** Md. Khalid Hasan  
 **Student ID:** IT24013
